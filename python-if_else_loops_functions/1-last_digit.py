@@ -11,6 +11,6 @@ if (number < 0):
 if (absolute % 10 > 5):
     print('Last digit of', number,'is', absoluteString, absolute, 'and is greater than 5')
 if (absolute % 10 < 5 and absolute % 10 > 0):
-    print('Last digit of', number,'is',absoluteString, absolute, 'and is less than 5')
+    print('Last digit of', number,'is',absoluteString, absolute, 'and is less than 5 and not 0')
 if (absolute % 10 == 0) :
     print('Last digit of', number,'is',absolute, 'and is 0')
