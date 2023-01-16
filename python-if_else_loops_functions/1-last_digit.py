@@ -9,10 +9,13 @@ if (number < 0):
 
 if (number % 10 > 5):
     print('Last digit of', number, 'is',
-    absoluteString + str(absolute), 'and is greater than 5')
+    absoluteString + str(absolute), 'and
+    is greater than 5')
+
 if (number % 10 < 5 and absolute % 10 > 0):
     print('Last digit of', number, 'is',
-    absoluteString + str(absolute), 'and is less than 6 and not 0')
+    absoluteString + str(absolute), 'and
+    is less than 6 and not 0')
 
 if (number % 10 == 0):
     print('Last digit of', number, 'is', absolute, 'and is 0')
