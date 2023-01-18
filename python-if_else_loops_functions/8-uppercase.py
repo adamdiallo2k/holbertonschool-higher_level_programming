@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 def uppercase(str):
     result = ""
     for i in range(len(str)):
@@ -6,4 +5,4 @@ def uppercase(str):
             result += chr(ord(str[i]) - 32)
         else:
             result += str[i]
-    print(result)
+    print("{}".format(result))
