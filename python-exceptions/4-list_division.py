@@ -14,4 +14,3 @@ def list_division(my_list_1, my_list_2, list_length):
             # code to run regardless of whether an exception was raised
             pass
     return my_list_3
-
