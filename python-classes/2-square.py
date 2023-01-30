@@ -1,21 +1,29 @@
 #!/usr/bin/python3
 
+"""
+This module contains the class Square which creates a square object.
+"""
+
 class Square:
     """
-    Square is a class that defines a square.
+    The Square class creates a square object with a size attribute.
 
-    A square is a shape with four equal sides and four right angles.
+    Attributes:
+        __size (int): The size of the square.
     """
     __size = 0
 
 
     def __init__(self, size=0):
         """
-        This method is the constructor of the Square class.
+        The constructor for Square class.
 
-        :param size: The size of the square
-        :raises: TypeError if size is not an integer
-                 ValueError if size is less than 0
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
+
+        Args:
+            size (int, optional): The size of the square. Defaults to 0.
         """
         if type(size) is not int:
             raise TypeError('size must be an integer')
