@@ -7,6 +7,9 @@ The Square class represents a square with a size.
 
 
 class Square:
+     """
+    Represents a square with a size.
+    """
     __size = 0
 
     def __init__(self, size=0):
