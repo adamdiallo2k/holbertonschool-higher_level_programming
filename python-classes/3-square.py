@@ -3,6 +3,7 @@
 This module contains the definition of the Square class
 """
 
+
 class Square:
     """
     A class representing a Square, with a size attribute.
@@ -12,7 +13,7 @@ class Square:
     def __init__(self, size=0):
         """
         Initializes a new instance of the Square class
-        
+
         Args:
         size (int): The size of the Square, with a default value of 0.
 
@@ -31,4 +32,3 @@ class Square:
         Returns the area of the Square.
         """
         return self.__size * self.__size
-
