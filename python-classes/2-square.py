@@ -4,6 +4,7 @@
 This module contains the class Square which creates a square object.
 """
 
+
 class Square:
     """
     The Square class creates a square object with a size attribute.
@@ -12,7 +13,6 @@ class Square:
         __size (int): The size of the square.
     """
     __size = 0
-
 
     def __init__(self, size=0):
         """
