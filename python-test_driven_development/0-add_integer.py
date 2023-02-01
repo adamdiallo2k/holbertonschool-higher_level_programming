@@ -18,9 +18,9 @@ def add_integer(a, b=98):
     TypeError: If either `a` or `b` is not of type int or float.
     """
     if not isinstance(a, (int, float)):
-        raise TypeError("The argument 'a' must be either of type int or float.")
+        raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
-        raise TypeError("The argument 'b' must be either of type int or float.")
+        raise TypeError("b must be an integer")
 
     a = int(a) if isinstance(a, float) else a
     b = int(b) if isinstance(b, float) else b
