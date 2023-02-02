@@ -1,22 +1,14 @@
-import unittest
+>>> from module import add_integer
 
-class TestAddInteger(unittest.TestCase):
-    def test_add_integer_with_integers(self):
-        result = add_integer(2, 3)
-        self.assertEqual(result, 5, "Adding 2 and 3 should return 5")
-
-    def test_add_integer_with_float(self):
-        result = add_integer(2.5, 3.5)
-        self.assertEqual(result, 6, "Adding 2.5 and 3.5 should return 6 after converting to integer")
-
-    def test_add_integer_with_default_value(self):
-        result = add_integer(2)
-        self.assertEqual(result, 100, "Adding 2 and the default value 98 should return 100")
-
-    def test_add_integer_with_non_integer(self):
-        with self.assertRaises(TypeError, msg="Adding non-integer values 'a' and 'b' should raise TypeError"):
-            add_integer('a', 'b')
-
-if __name__ == '__main__':
-    unittest.main()
-
+>>> add_integer(1, 2)
+3
+>>> add_integer(100,-2)
+98
+>>> add_integer(2)
+100
+>>> add_integer(100.3, -2)
+98
+>>> add_integer(4, "School")
+b must be an integer
+>>> add_integer(None)
+a must be an integer
