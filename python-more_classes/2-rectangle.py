@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 class Rectangle:
     """
     Defines a Rectangle with private instance attributes `width` and `height`.
