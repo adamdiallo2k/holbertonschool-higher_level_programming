@@ -1,5 +1,4 @@
  #!/usr/bin/python3
-
 def matrix_divided(matrix, div):
     """
     This function divides all elements of a given matrix by a given number div.
