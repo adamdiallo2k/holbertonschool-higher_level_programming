@@ -2,6 +2,8 @@
 """
 This module contains the class Rectangle, which represents a rectangle.
 """
+
+
 class Rectangle:
     """
     Defines a Rectangle with private instance attributes `width` and `height`.
