@@ -11,7 +11,7 @@ Exception: area() is not implemented
 Traceback (most recent call last):
 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
->>> bg.integer_validator("hola")
+>>> bg.integer_validator("hi")
 Traceback (most recent call last):
 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
