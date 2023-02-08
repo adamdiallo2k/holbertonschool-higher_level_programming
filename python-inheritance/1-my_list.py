@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """ Module """
 class MyList(list):
+    """
+    This class extends the built-in 'list' class and adds a method to print a sorted copy of the list in ascending order.
+    The original list remains unchanged.
+    """
     def print_sorted(self):
         """
         Prints a sorted copy of the list in ascending order. The original list remains unchanged.
