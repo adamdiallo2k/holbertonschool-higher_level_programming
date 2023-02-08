@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+""" Module """
 class MyList(list):
-    """ Module """
     def print_sorted(self):
         """
         Prints a sorted copy of the list in ascending order. The original list remains unchanged.
