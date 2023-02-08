@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-""" Module """
+""" module """
 class MyList(list):
-    """
-    A custom list class that inherits from the built-in list class and implements a print_sorted method.
-    """
     def print_sorted(self):
         """
-        This method sorts the list in ascending order and prints the sorted list.
+        This function takes a list as an argument, sorts a copy of the list in ascending order using a for loop, and then prints the sorted list. The original list is not modified.
+
+        Args:
+        lst (list): The list to be sorted and printed.
 
         Returns:
-            None
+        None
         """
-        for i in range(len(self)):
-            for j in range(i + 1, len(self)):
-                if self[i] > self[j]:
-                    self[i], self[j] = self[j], self[i]
-        print(self)
+        sorted_list = self[:]
+        for i in range(len(sorted_list)):
+            for j in range(i + 1, len(sorted_list)):
+                if sorted_list[i] > sorted_list[j]:
+                    sorted_list[i], sorted_list[j] = sorted_list[j], sorted_list[i]
+        print(sorted_list)
+
