@@ -1,10 +1,10 @@
-""" Module """
 #!/usr/bin/python3
+""" Module """
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(BaseGeometry):
-
+@
     """ Write a class Square that inherits from Rectangle """
     def __init__(self, size):
         super().integer_validator("size", size)
