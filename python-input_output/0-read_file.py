@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Module """
 def read_file(filename=""):
     """
     This function takes a filename as an argument and prints the content of the file.
