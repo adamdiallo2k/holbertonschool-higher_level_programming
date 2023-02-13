@@ -4,6 +4,7 @@ This module defines a Base class for creating objects with unique integer IDs.
 """
 
 class Base:
+
     """
     A class for creating objects with unique integer IDs.
     """
@@ -15,7 +16,8 @@ class Base:
         Initialize a Base object with a unique ID.
 
         Args:
-            id (int, optional): The ID to assign to the object. If not provided, a new unique ID will be generated.
+            id (int, optional): The ID to assign to the object. 
+            If not provided, a new unique ID will be generated.
 
         Attributes:
             id (int): The ID assigned to the object.
