@@ -1,14 +1,17 @@
 #!/usr/bin/python3
 
 """
-This module defines a Rectangle 
+This module defines a Rectangle
 class, which inherits from the Base class,
 for creating rectangle objects with unique integer IDs.
 """
 
 from models.base import Base
 
+
 class Rectangle(Base):
+
+
     """
     A class for creating rectangle 
     objects with unique integer IDs.
