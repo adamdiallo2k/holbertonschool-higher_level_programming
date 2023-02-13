@@ -3,9 +3,8 @@
 This module defines a Base class for creating objects with unique integer IDs.
 """
 
-class Base:
 
-    
+class Base:
     """
     A class for creating objects with unique integer IDs.
     """
