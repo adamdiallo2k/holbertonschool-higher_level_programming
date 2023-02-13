@@ -11,17 +11,16 @@ from models.base import Base
 
 class Rectangle(Base):
 
-
     """
-    A class for creating rectangle 
+    A class for creating rectangle
     objects with unique integer IDs.
     Inherits from the Base class.
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        Initialize a Rectangle object with a unique 
-        ID and the specified width, height, 
+        Initialize a Rectangle object with a unique
+        ID and the specified width, height,
         x-coordinate, and y-coordinate.
 
         Args:
@@ -38,7 +37,7 @@ class Rectangle(Base):
             id (int): The ID assigned to the rectangle.
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
-            x (int): The x-coordinate of the upper-left 
+            x (int): The x-coordinate of the upper-left
             corner of the rectangle.
             y (int): The y-coordinate of the upper-left
             corner of the rectangle.
