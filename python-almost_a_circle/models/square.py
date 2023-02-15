@@ -67,6 +67,25 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """
+        Update the attributes of the Square object.
+
+        The method takes variable-length arguments and keyword arguments.
+        If the method is called with variable-length arguments, the first
+        argument is the ID, the second argument is the size, the third
+        argument is the x coordinate, and the fourth argument is the y coordinate
+        (if provided). If the method is called with keyword arguments, the
+        method updates the attributes based on the keyword arguments provided.
+        If the keyword argument is size, the width and height attributes of the
+        Rectangle object are updated with the same value.
+
+        Args:
+            *args: Variable-length arguments.
+            **kwargs: Keyword arguments.
+
+        Returns:
+            None.
+        """
         if args:
             if len(args) > 0:
                 self.id = args[0]
