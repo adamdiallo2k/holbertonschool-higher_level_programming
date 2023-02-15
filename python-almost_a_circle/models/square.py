@@ -2,7 +2,36 @@
 from models.rectangle import Rectangle
 """A module that contains the Square class."""
 class Square(Rectangle):
+      """
+    A class for creating square
+    objects with unique integer IDs.
+    Inherits from the Rectangle class.
+    """
     def __init__(self, size, x=0, y=0, id=None):
+        """
+        Initialize a Square object with a unique ID
+        and the specified size, x-coordinate, and y-coordinate.
+
+        Args:
+            size (int): The size of the square.
+            x (int, optional): The x-coordinate of the
+            upper-left corner of the square. Default is 0.
+            y (int, optional): The y-coordinate of the upper-left
+            corner of the square. Default is 0.
+            id (int, optional): The ID to assign to the square.
+            If not provided, a new unique ID will be generated.
+
+        Attributes:
+            id (int): The ID assigned to the square.
+            size (int): The size of the square.
+            x (int): The x-coordinate of the upper-left
+            corner of the square.
+            y (int): The y-coordinate of the upper-left
+            corner of the square.
+
+        Returns:
+            None.
+        """
         super().__init__(size,size,x,y,id)
         self.__size = size
     def __str__(self):
