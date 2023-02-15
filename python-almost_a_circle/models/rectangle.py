@@ -128,17 +128,26 @@ class Rectangle(Base):
         The area of the Rectangle object.
     """
         return self.__height * self.__width
-    
     def display(self):
         """
-        Displays the rectangle on the console using the '#' character.
+        Prints in the standard output the Rectangle
+        instance with the character '#' in a grid.
+        The instance position in the grid is determined
+        by the x and y attributes. It does not return anything.
+
+        Args:
+            None
 
         Returns:
-            None.
+            None
         """
+        for y in range(self.__y):
+            print("")
         for i in range(self.__height):
+            for z in range(self.__x):
+                print(" ", end='')
             for j in range(self.__width):
-                print(f"#",end='')
+                print("#", end='')
             print("")
     def __str__(self):
         """
