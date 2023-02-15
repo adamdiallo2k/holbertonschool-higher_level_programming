@@ -197,8 +197,6 @@ class Rectangle(Base):
     
     def to_dictionary(self):
         """
-        Return a dictionary representation of the Square object.
-
         Returns:
             A dictionary with the following keys:
             - "id": The ID of the Square object.
@@ -206,4 +204,4 @@ class Rectangle(Base):
             - "x": The x-coordinate of the upper-left corner of the Square object.
             - "y": The y-coordinate of the upper-left corner of the Square object.
         """
-        return {"id": self.id, "x": self.x, "y": self.y, "width": self.width, "height": self.height}
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
