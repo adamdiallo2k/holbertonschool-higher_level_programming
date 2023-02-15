@@ -155,9 +155,9 @@ class Rectangle(Base):
         object in the format: [Rectangle] (<id>) <x>/<y> <width>/<height>
         """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
-    Update the Rectangle attributes using *args argument.
+    Update the Rectangle attributes using *args and **kwargs.
 
     Args:
         *args: Variable length argument list.
@@ -166,17 +166,30 @@ class Rectangle(Base):
             args[2] (int, optional): The height of the rectangle.
             args[3] (int, optional): The x-coordinate of the rectangle.
             args[4] (int, optional): The y-coordinate of the rectangle.
+        **kwargs: A dictionary of keyword arguments that can be
+            passed to update the Rectangle attributes.
 
     Returns:
         None.
     """
         if len(args) > 0:
             self.id = args[0]
-            if len(args) > 1:
-                self.width = args[1]
-            if len(args) > 2:
-                self.height = args[2]
-            if len(args) > 3:
-                self.x = args[3]
-            if len(args) > 4:
-                self.y = args[4]
+        if len(args) > 1:
+            self.width = args[1]
+        if len(args) > 2:
+            self.height = args[2]
+        if len(args) > 3:
+            self.x = args[3]
+        if len(args) > 4:
+            self.y = args[4]
+        else:
+            if 'width' in kwargs:
+                self.__width = kwargs['width']
+            if 'height' in kwargs:
+                self.__height = kwargs['height']
+            if 'id' in kwargs:
+                self.__id = kwargs['id']
+            if 'x' in kwargs:
+                self.__x = kwargs['x']
+            if 'y' in kwargs:
+                self.__x = kwargs['x']
