@@ -2,7 +2,7 @@
 from models.rectangle import Rectangle
 """A module that contains the Square class."""
 class Square(Rectangle):
-      """
+    """
     A class for creating square
     objects with unique integer IDs.
     Inherits from the Rectangle class.
