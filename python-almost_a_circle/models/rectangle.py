@@ -185,12 +185,12 @@ class Rectangle(Base):
                 self.y = args[4]
         else:
             if 'width' in kwargs:
-                self.__width = kwargs['width']
+                self.width = kwargs['width']
             if 'height' in kwargs:
-                self.__height = kwargs['height']
+                self.height = kwargs['height']
             if 'id' in kwargs:
-                self.__id = kwargs['id']
+                self.id = kwargs['id']
             if 'x' in kwargs:
-                self.__x = kwargs['x']
+                self.x = kwargs['x']
             if 'y' in kwargs:
-                self.__y = kwargs['y']
+                self.y = kwargs['y']
