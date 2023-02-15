@@ -206,5 +206,4 @@ class Rectangle(Base):
             - "x": The x-coordinate of the upper-left corner of the Square object.
             - "y": The y-coordinate of the upper-left corner of the Square object.
         """
-        return {"id": self.id, "size": self.width, "height": self.height, "x": self.x, "y": self.y}
-
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y, "width": self.width, "height": self.height}
