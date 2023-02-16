@@ -30,7 +30,7 @@ class Base:
         else:
             self.__class__.__nb_objects += 1
             self.id = self.__class__.__nb_objects
-    
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         Returns a JSON string representation of a Square instance.
