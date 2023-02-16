@@ -35,4 +35,7 @@ class Base:
         """
         Returns a JSON string representation of a Square instance.
         """
-        return json.dumps(list_dictionaries)
+        if (list_dictionaries):
+            return json.dumps(list_dictionaries)
+        else:
+            return "[]"
