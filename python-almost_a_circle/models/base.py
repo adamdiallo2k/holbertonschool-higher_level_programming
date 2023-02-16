@@ -32,7 +32,7 @@ class Base:
             self.id = self.__class__.__nb_objects
     
     def to_json_string(list_dictionaries):
-         """
+        """
         Returns a JSON string representation of a Square instance.
         """
         return json.dumps(list_dictionaries)
