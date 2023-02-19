@@ -35,11 +35,11 @@ class Base:
         """
         Returns a JSON string representation of a Square instance.
         """
-        if (list_dictionaries):
-            return json.dumps(list_dictionaries)
-        else:
+        if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
-    @staticmethod
+        else:
+            return json.dumps(list_dictionaries)
+
     def save_to_file(cls, list_objs):
         """
         Saves a list of objects to a JSON file.
@@ -58,10 +58,13 @@ class Base:
             ExampleClass.save_to_file(list_of_objects)
 
         """
-        filename = cls.__name__ + '.json'
+        if list_objs is None:
+            list_objs = []
+
+        filename = cls.__name__ + ".json"
+
         with open(filename, "w") as file:
-            if list_objs is None:
-                file.write("[]")
-            else:
-                list_dicts = [obj.to_dictionary() for obj in list_objs]
-                file.write(cls.to_json_string(list_dicts))
+            list_dicts = []
+            for obj in list_objs:
+                list_dicts.append(cls.to_dictionary(obj))
+            file.write(cls.to_json_string(list_dicts))
