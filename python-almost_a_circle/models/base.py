@@ -30,6 +30,7 @@ class Base:
         else:
             self.__class__.__nb_objects += 1
             self.id = self.__class__.__nb_objects
+    
     @staticmethod
     def to_json_string(list_dictionaries):
         """
@@ -39,6 +40,7 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+        
     @classmethod
     def save_to_file(cls, list_objs):
         """
@@ -68,3 +70,27 @@ class Base:
             for obj in list_objs:
                 list_dicts.append(cls.to_dictionary(obj))
             file.write(cls.to_json_string(list_dicts))
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        Converts a JSON string representation to a list of dictionaries.
+
+        Args:
+            json_string (str): a JSON string.
+
+        Returns:
+            A list of dictionaries.
+
+        Raises:
+            None.
+
+        Example:
+            list_of_dicts = Base.from_json_string(json_string)
+
+        """
+        if json_string is None:
+            return []
+        else:
+            dict_data = json.loads(json_string)
+            list_of_dicts = [{"height": data["height"], "width": data["width"], "id": data["id"]} for data in dict_data]
+            return list_of_dicts
