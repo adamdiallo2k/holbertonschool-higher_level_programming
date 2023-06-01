@@ -6,7 +6,6 @@ if (number < 0):
     if (absnumber == 0):
         print("Last digit of",number," is",absnumber, "and is 0")
     else:
-        
         print("Last digit of",number,"is","-" + str(absnumber),"and is less than 6 and not 0")
 if (number > 0):
     if (absnumber == 0):
