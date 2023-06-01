@@ -1,4 +1,5 @@
 #!/usr/bin/python3
 
-print(''.join([chr(ch) for ch in range(97, 123)]))
+for ch in range(97, 123):
+    print("{:c}".format(ch), end='')
 
