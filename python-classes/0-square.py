@@ -2,4 +2,3 @@
 """Module for Square"""
 class Square:
     """ Content of square"""
-
