@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-This is a module for Square.
+This is the "Square"  module.
+
+This module provides a simple Square class.
 """
 
 
 class Square:
-    """ 
-    This class represents a square. 
-    More detailed information about the class can be provided here.
-    """
-    pass
+    """ Square class empty"""
+    
