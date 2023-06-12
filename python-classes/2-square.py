@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-
+"""module"""
 class Square:
-    """module"""
+    """class"""
     def __init__(self, size=0):
         if isinstance(size, int) == True:
             raise TypeError('size must be an integer')
