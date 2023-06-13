@@ -26,7 +26,6 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """print the square in stdout"""
         if self.__size is 0:
             print("{}".format(""))
         else:
