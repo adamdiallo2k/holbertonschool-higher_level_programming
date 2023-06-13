@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """commented Module"""
 
+
 class Square:
     """Commented class"""
     def __init__(self, size=0):
