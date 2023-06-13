@@ -8,7 +8,6 @@ class Square:
         self.__size = size
 
     @property
-
     def size(self):
         """gets the size of the square"""
         return self.__size
