@@ -27,7 +27,7 @@ class Square:
         """gets the size of the square"""
         return self.__position
 
-    @size.position
+    @position.setter
     def position(self, value):
         """set the position"""
         valid = 0
