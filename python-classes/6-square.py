@@ -30,11 +30,20 @@ class Square:
     @size.position
     def position(self, value):
         """set the position"""
-        for i in range(len(value)):
-            if value[i] < 0:
-                raise TypeError("position must be a tuple of 2 positive integers")
-            else:
-                self.__position[i] = value[i]
+        valid = 0
+        if not isinstance(value, tuple) and len(value) == 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            for i in range(len(value)):
+                if value[i] < 0:
+                    raise TypeError("position must be a tuple of 2 positive integers")
+                else:
+                    value += 1
+            if value == 2:
+                self.__position = value
+                
+                
+        
 
     def area(self):
         """Return the area of the square"""
