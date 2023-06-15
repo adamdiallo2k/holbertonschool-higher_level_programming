@@ -1,6 +1,8 @@
 #!/usr/bin/python3
+"""module commented"""
 
 def text_indentation(text):
+    """function commented"""
     if not isinstance(text, str):
         raise TypeError('text must be a string')
 
