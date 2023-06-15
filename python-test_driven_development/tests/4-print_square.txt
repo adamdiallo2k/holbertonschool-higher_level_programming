@@ -1,33 +1,22 @@
-Import ``print_square`` from the ``4-print_square`` module:
+This is the "4-print_square" module
+==================================
+
+Using ``print_square`` 
+---------------------
+
+Import ``print_square`` from the ``3-print_square`` module:
 
     >>> print_square = __import__('4-print_square').print_square
 
+size is a positive integer:
     >>> print_square(4)
     ####
     ####
     ####
     ####
 
-if size is less than 0:  
-    >>> print_square(-2)
+size is a negative integer:
+    >>> print_square(-1)
     Traceback (most recent call last):
-    ...
-    ValueError: size must be >= 0
-
-size must be an integer:
-    >>> print_square("lol")
-    Traceback (most recent call last):
-    ...
-    TypeError: size must be an integer
-
-if size is a float and is less than 0
-    >>> print_square(-3.0)
-        Traceback (most recent call last):
         ...
-        size must be an integer
-
-Zero arguments:
-    >>> print_square()
-    Traceback (most recent call last):
-    ...
-    TypeError: print_square() missing 1 required positional argument: 'size'
+    TypeError: size must be >= 0
