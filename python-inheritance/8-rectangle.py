@@ -1,28 +1,6 @@
 #!/usr/bin/python3
 """commented module"""
-
-
-class BaseGeometry:
-    """A base class with a method for validating integer values."""
-
-    @staticmethod
-    def integer_validator(name, value):
-        """
-        A static method that checks if a value is a positive integer.
-
-        Args:
-            name (str): The name of the variable to check.
-            value (int): The value of the variable to check.
-
-        Raises:
-            TypeError: If value is not an integer.
-            ValueError: If value is not greater than zero.
-        """
-
-        if type(value) is not int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
