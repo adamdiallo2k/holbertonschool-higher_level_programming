@@ -2,6 +2,6 @@
 """commented module"""
 
 
-class Geometry:
+class BaseGeometry:
     """commented class"""
     pass
