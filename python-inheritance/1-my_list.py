@@ -5,4 +5,4 @@
 class MyList(list):
     """commented class"""
     def print_sorted(self): 
-        print("{}".format(sorted(self)))
+        print(sorted(self))
