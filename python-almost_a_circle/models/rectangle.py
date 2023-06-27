@@ -74,7 +74,7 @@ class Rectangle(Base):
             rectangle += ("#" * self.width) + "\n"
         print(rectangle, end='')
 
-    def __str__(self) -> str:
+    def __str__(self):
         """
         __str__ method
         """
