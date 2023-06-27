@@ -67,7 +67,7 @@ class Rectangle(Base):
 
 
     def display(self):
-        """Prints the rectangle with #"""
+        """Prints"""
         rectangle = self.y * "\n"
         for i in range(self.height):
             rectangle += (" " * self.x)
