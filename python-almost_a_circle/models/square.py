@@ -10,23 +10,8 @@ class Square(Rectangle):
         """Initialize a Square instance"""
         super().__init__(size, size, x, y, id)
 
-    @property
-    def size(self):
-        """Get the size of the Square"""
-        return self.width
-
-    @size.setter
-    def size(self, value):
-        """Set the size of the Square"""
-        self.width = value
-        self.height = value
-
-    def __str__(self):
-        """Return the print() and str() representation of a Square"""
-        return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.width)
-    
     def update(self, *args, **kwargs):
+        """Update attributes based on arguments"""
         if args:
             if len(args) >= 1:
                 self.id = args[0]
