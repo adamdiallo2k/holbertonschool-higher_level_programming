@@ -96,7 +96,7 @@ class Rectangle(Base):
                 if key == "y":
                     self.__y = value
                     
-        def to_dictionary(self):
+    def to_dictionary(self):
             """Return a dictionary representation of the Rectangle"""
             return {
                 "id": self.id,
