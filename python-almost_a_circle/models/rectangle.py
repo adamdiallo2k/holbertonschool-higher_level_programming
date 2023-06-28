@@ -97,4 +97,4 @@ class Rectangle(Base):
                     self.__y = value
     
     def to_dictionary(self):
-            self.__dict__
+           return self.__dict__
