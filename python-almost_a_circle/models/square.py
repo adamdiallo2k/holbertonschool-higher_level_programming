@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """commented module"""
 from models.rectangle import Rectangle
+import json
 
 
 class Square(Rectangle):
