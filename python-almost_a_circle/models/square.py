@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """commented module"""
-
 from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """Class Square"""
