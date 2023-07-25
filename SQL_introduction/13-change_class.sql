@@ -2,4 +2,4 @@
 
 delete 
 from second_table
-where score <= 5
+where score <= 5;
