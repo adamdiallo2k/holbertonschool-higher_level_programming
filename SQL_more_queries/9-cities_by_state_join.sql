@@ -1,0 +1,5 @@
+-- Write a script that lists all cities contained in the database hbtn_0d_usa.
+SELECT cities.id, cities.name, states.name
+FROM states, cities
+WHERE state_id = (SELECT id FROM states)
+ORDER BY cities.id
