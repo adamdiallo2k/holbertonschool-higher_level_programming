@@ -27,6 +27,20 @@
             "database": "myshop",
             "username": "admin",
             "password": "root87+-6"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "firstMSQLC",
+            "database": "myshop2",
+            "username": "root",
+            "password": "root87+-6"
         }
     ]
 }
