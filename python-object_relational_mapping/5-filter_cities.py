@@ -13,11 +13,12 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     cur = db.cursor()
     state_name = sys.argv[4]
-    cur.execute("""SELECT cities.name  FROM cities
+    cur.execute("""SELECT cities.name FROM cities
                 INNER JOIN states ON cities.state_id = states.id
-                WHERE states.name = %s ORDER BY cities.id ASC""", (state_name,))
+                WHERE states.id = (SELECT states.id FROM states WHERE states.name = %s)
+                ORDER BY cities.id ASC""", (state_name,))
     rows = cur.fetchall()
     for row in rows:
-        print(row)
+        print(row[0])
     cur.close()
     db.close()
