@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-List all State objects from the database
+Print the first State object from the database
 """
 
 from sqlalchemy import create_engine
@@ -13,7 +13,9 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    for state in session.query(State).order_by(State.id):
-        print("{}: {}".format(state.id, state.name))
-        break
+    first_state = session.query(State).order_by(State.id).first()
+    if first_state is not None:
+        print("{}: {}".format(first_state.id, first_state.name))
+    else:
+        print("Nothing")
     session.close()
