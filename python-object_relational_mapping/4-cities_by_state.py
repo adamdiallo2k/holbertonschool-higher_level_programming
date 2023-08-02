@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """List all states from a given db sorted in ascending order by id"""
 
-
 import MySQLdb
 import sys
 
@@ -10,9 +9,7 @@ if __name__ == "__main__":
     passwd_db = sys.argv[2]
     name_db = sys.argv[3]
 
-    db = MySQLdb.connect(
-        host="localhost", user=user_db, passwd=passwd_db, db=name_db, port=3306
-    )
+    db = MySQLdb.connect(host="localhost", user=user_db, passwd=passwd_db, db=name_db, port=3306)
 
     querie = db.cursor()
 
