@@ -14,11 +14,11 @@ if __name__ == "__main__":
         host="localhost", user=user_db, passwd=passwd_db, db=name_db, port=3306
     )
 
-    cur = db.cursor()
+    querie = db.cursor()
 
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    querie.execute("SELECT * FROM states ORDER BY states.id ASC")
 
-    results = cur.fetchall()
+    results = querie.fetchall()
 
     for element in results:
         print(element)
