@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """List all states from a given db sorted in ascending order by id"""
 
+
 import MySQLdb
 import sys
 
@@ -13,7 +14,7 @@ if __name__ == "__main__":
 
     querie = db.cursor()
 
-    querie.execute("SELECT * FROM cities ORDER BY id ")
+    querie.execute("SELECT * FROM cities ORDER BY cities.id ")
 
     results = querie.fetchall()
 
