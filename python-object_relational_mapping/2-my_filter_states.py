@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     querie = db.cursor()
 
-    querie.execute("SELECT * FROM states WHERE name = '%s' 'N%' ORDER BY states.id ASC", (state_name_searched,))
+    querie.execute("SELECT id, name FROM states WHERE name = '%s' 'N%' ORDER BY states.id ASC", (state_name_searched,))
 
     results = querie.fetchall()
 
