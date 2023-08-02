@@ -1,24 +1,20 @@
 #!/usr/bin/python3
-"""List all states from a given db sorted in ascending order by id"""
-
+"""
+List all cities from the database
+"""
 
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    user_db = sys.argv[1]
-    passwd_db = sys.argv[2]
-    name_db = sys.argv[3]
-
-    db = MySQLdb.connect(host="localhost", user=user_db, passwd=passwd_db, db=name_db, port=3306)
-
-    querie = db.cursor()
-
-    querie.execute("SELECT * FROM cities ORDER BY cities.id ")
-
-    results = querie.fetchall()
-
-    for element in results:
-        print(element)
-
+    db = MySQLdb.connect(host="localhost", port=3306,
+                         user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3])
+    cur = db.cursor()
+    cur.execute("SELECT * FROM cities ORDER BY cities.id ASC")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.close()
     db.close()
