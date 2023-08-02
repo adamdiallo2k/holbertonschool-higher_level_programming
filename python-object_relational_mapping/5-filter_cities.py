@@ -1,23 +1,44 @@
 #!/usr/bin/python3
-"""
-List all cities of a state from the database
-"""
+"""List all cities from the db by given state"""
 
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    db = MySQLdb.connect(host="localhost", port=3306,
-                         user=sys.argv[1],
-                         passwd=sys.argv[2],
-                         db=sys.argv[3])
-    cur = db.cursor()
-    state_name = sys.argv[4]
-    cur.execute("""SELECT cities.name FROM cities
-                JOIN states ON cities.state_id = states.id
-                WHERE states.name = '%s' ORDER BY cities.id ASC""", (state_name,))
-    rows = cur.fetchall()
+    """Connexion to the database"""
+    db = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3]
+    )
+
+    """Defining the cursor"""
+    cursor = db.cursor()
+
+    """Execute the query"""
+    cursor.execute(
+        """
+        SELECT cities.name
+        FROM cities
+        JOIN states
+        ON states.id = cities.state_id
+        WHERE states.name LIKE BINARY %s
+        ORDER BY cities.id
+        """, (sys.argv[4],)
+    )
+
+    """Get results of the query"""
+    rows = cursor.fetchall()
+
+    """Format the output into a string"""
+    city_names = []
     for row in rows:
-        print(row[0])
-    cur.close()
+        city_names.append(row[0])
+    string = ", ".join(city_names)
+    print(string)
+
+    """Close cursor session and connexion"""
+    cursor.close()
     db.close()
