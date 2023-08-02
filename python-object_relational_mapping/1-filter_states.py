@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     querie = db.cursor()
 
-    querie.execute("SELECT id, name FROM states ORDER BY states.id")
+    querie.execute("SELECT id, name FROM states WHERE SUBSTRING(name, 1, 1) = 'L' ORDER BY states.id ")
 
     results = querie.fetchall()
 
