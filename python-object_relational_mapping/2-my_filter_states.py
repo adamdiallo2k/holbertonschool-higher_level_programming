@@ -13,7 +13,14 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     cur = db.cursor()
     state_name = sys.argv[4]
-    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY states.id ASC", (state_name,))
+    cursor.execute(
+        """
+        SELECT *
+        FROM states
+        WHERE states.name LIKE BINARY '{}'
+        ORDER BY states.id
+        """.format(sys.argv[4])
+    )
     rows = cur.fetchall()
     for row in rows:
         print(row)
