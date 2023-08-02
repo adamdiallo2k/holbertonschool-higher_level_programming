@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     querie = db.cursor()
 
-    querie.execute("SELECT id, name FROM states WHERE SUBSTRING(name, 1, 1) = 'L' ORDER BY states.id ")
+    querie.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC")
 
     results = querie.fetchall()
 
