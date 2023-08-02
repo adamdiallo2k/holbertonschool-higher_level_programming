@@ -12,7 +12,7 @@ if __name__ == "__main__":
                          passwd=sys.argv[2],
                          db=sys.argv[3])
     cur = db.cursor()
-    cursor.execute(
+    cur.execute(
         """
         SELECT *
         FROM states
