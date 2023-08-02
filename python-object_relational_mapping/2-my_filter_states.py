@@ -1,28 +1,21 @@
 #!/usr/bin/python3
-"""List all states from a given db sorted in ascending order by id"""
-
+"""
+List all states with a name that matches the argument
+"""
 
 import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    user_db = sys.argv[1]
-    passwd_db = sys.argv[2]
-    name_db = sys.argv[3]
-    state_name_searched = sys.argv[4]
-
-
-    db = MySQLdb.connect(
-        host="localhost", user=user_db, passwd=passwd_db, db=name_db, port=3306
-    )
-
-    querie = db.cursor()
-
-    querie.execute("SELECT id, name FROM states WHERE name = '%s' 'N%' ORDER BY states.id ASC", (state_name_searched,))
-
-    results = querie.fetchall()
-
-    for element in results:
-        print(element)
-
+    db = MySQLdb.connect(host="localhost", port=3306,
+                         user=sys.argv[1],
+                         passwd=sys.argv[2],
+                         db=sys.argv[3])
+    cur = db.cursor()
+    state_name = sys.argv[4]
+    cur.execute("SELECT * FROM states WHERE name = %s ORDER BY states.id ASC", (state_name,))
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.close()
     db.close()
